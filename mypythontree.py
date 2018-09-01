@@ -132,11 +132,5 @@ for i in range(q):
             else:
                 mi.count-=1
  
-    else:
-        data=int(input_str.split()[1])
-        tmp=search(root,data)
-        if tmp is None:
-            root=insert(root,data)
-        else:
-            tmp.count+=1
+
  
