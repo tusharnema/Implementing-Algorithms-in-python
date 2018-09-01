@@ -112,11 +112,6 @@ for i in range(q):
         mi=getMin(root)
         if ma is None and mi is None:
             print(-1)
-        elif ma.data!=mi.data:
-            print(ma.data-mi.data)
-            if ma.count==1:
-                root=delete(root,ma.data)
-
 
 
  
