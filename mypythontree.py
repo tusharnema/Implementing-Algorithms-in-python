@@ -84,6 +84,16 @@ def lcm(root,key1,key2):
             return lcm(root.left,key1,key2)
         else:
             return lcm(root.right,key1,key2)
+
+def sortedArrayToBST(arr):
+    if not arr:
+        return None
+    mid=len(arr)//2
+    root=Node(arr[mid])
+
+    root.left=sortedArrayToBST(arr[:mid])
+    root.right=sortedArrayToBST(arr[mid+1:])
+    return root
  
  
     
