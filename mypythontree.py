@@ -116,15 +116,7 @@ for i in range(q):
             print(ma.data-mi.data)
             if ma.count==1:
                 root=delete(root,ma.data)
-            else:
-                ma.count-=1
- 
-            if mi.count==1:
-                root=delete(root,mi.data)
-            else:
-                mi.count-=1
-                
-        
+
 
 
  
