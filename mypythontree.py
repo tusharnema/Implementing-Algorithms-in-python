@@ -104,14 +104,6 @@ for i in range(q):
     if input_str=='CountHigh':
         print(getMax(root).count if root is not None else -1)
  
-    elif input_str=='CountLow':
-        print(getMin(root).count if root is not None else -1)
- 
-    elif input_str=='Diff':
-        ma=getMax(root)
-        mi=getMin(root)
-        if ma is None and mi is None:
-            print(-1)
 
 
  
