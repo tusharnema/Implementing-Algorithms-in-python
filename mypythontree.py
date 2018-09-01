@@ -125,12 +125,6 @@ for i in range(q):
                 mi.count-=1
                 
         
-        else:
-            print(0)
-            if mi.count==1:
-                root=delete(root,ma.data)
-            else:
-                mi.count-=1
- 
+
 
  
