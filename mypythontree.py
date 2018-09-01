@@ -96,14 +96,7 @@ def sortedArrayToBST(arr):
     return root
  
  
-    
-q=int(input())
-root=None
-for i in range(q):
-    input_str=input()
-    if input_str=='CountHigh':
-        print(getMax(root).count if root is not None else -1)
- 
+
 
 
  
