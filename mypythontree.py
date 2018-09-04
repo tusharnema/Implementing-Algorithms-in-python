@@ -8,7 +8,7 @@ class Node:
 def inorder(root):
     if root:
         inorder(root.left)
-        print(root.data,"-->",root.count)
+        print(root.data,end=' ')
         inorder(root.right)
  
 def insert(root,data):
@@ -95,8 +95,27 @@ def sortedArrayToBST(arr):
     root.right=sortedArrayToBST(arr[mid+1:])
     return root
  
- 
+def lca(root, x, y):
+    if root is None:
+        return None
+    if (root.data < x and root.data < y):
+        return lca(root.right, x, y)
+    if (root.data > x and root.data > y):
+        return lca(root.left, x, y)
+    return root
 
 
+root=None
 
- 
+root=insert(root,6)
+root=insert(root,7)
+root=insert(root,-2)
+root=insert(root,4)
+root=insert(root,1)
+root=insert(root,9)
+root=insert(root,11)
+root=insert(root,5)
+
+inorder(root)
+print()
+print(lca(root,1,5).data)
