@@ -24,5 +24,5 @@ def minSwap(t, n):
     
 root=None
 arr=[7,2,5,4,8]
-#print(sortedArrayToBST(arr).right.data)
+
 print(minSwap(arr,5))
