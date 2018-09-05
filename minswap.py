@@ -11,7 +11,7 @@ def minSwap(t, n):
         if t[i] not in visited:
             visited.add(t[i])
             cur = dic[t[i]]
-            #print(cur,t[i],'cur','t[i]')
+            
             while cur != i:
                 visited.add(t[cur])
                 cur = dic[t[cur]]
