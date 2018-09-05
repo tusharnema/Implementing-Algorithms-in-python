@@ -3,7 +3,6 @@ def minSwap(t, n):
     dic = dict()
     for i in range(n):
         dic[sortList[i]] = i
-    #print(dic,'dic')
     
     visited = set()
     result = 0
