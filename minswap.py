@@ -4,8 +4,7 @@ def minSwap(t, n):
     for i in range(n):
         dic[sortList[i]] = i
     #print(dic,'dic')
-    #print(t,'t')
-
+    
     visited = set()
     result = 0
     for i in range(n):
