@@ -16,7 +16,10 @@ def printLevelOrder(root):
 		dq.append(temp.right)
 		temp=dq.popleft()
 
-
+def height(root):
+	if(root):
+		return 1+max(height(root.left),height(root.right))
+	return 0
 
 root=Node(1)
 
