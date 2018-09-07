@@ -21,6 +21,13 @@ def height(root):
 		return 1+max(height(root.left),height(root.right))
 	return 0
 
+def identical(root1,root2):
+	if(root1 is None and root2 is None):
+		return True
+	if(root is not None and root2 is not None):
+		return ((root1.data==root2.data) and identical(root1.left,root2.left) and identical(root1.right,root2.right))
+	return False
+
 root=Node(1)
 
 root.left=Node(2)
