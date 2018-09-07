@@ -28,6 +28,14 @@ def identical(root1,root2):
 		return ((root1.data==root2.data) and identical(root1.left,root2.left) and identical(root1.right,root2.right))
 	return False
 
+def getleafcount(root):
+	if(root is None):
+		return 0
+	if(root.left is None and root.right is None):
+		return 1
+	else:
+		return (getleafcount(root.left)+ getleafcount(root.right))
+
 root=Node(1)
 
 root.left=Node(2)
