@@ -14,3 +14,10 @@ class Graph(object):
 
         for node1, node2 in connections:
             self.add(node1, node2)
+            
+    def add(self, node1, node2):
+        """ Add connection between node1 and node2 """
+
+        self.graph[node1].add(node2)
+        if not self.directed:
+            self.graph[node2].add(node1)
