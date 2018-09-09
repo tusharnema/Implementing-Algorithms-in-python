@@ -78,3 +78,18 @@ class Graph(object):
     			if(visited[nodes]==False):
     				queue.append(nodes)
     				visited[nodes]=True
+    
+    def DFS(self,s):
+	    visited=[False]*(len(self.graph))
+	    for i in range(len(self.graph)):
+	    	if(visited[i]==False):
+	    		self.DFS_track(i,visited)
+
+    def DFS_track(self,s,visited):
+        visited[s]=True
+        print(s,end="-->")
+
+        for nodes in self.graph[s]:
+        	if(visited[nodes]==False):
+        		visited[nodes]=True
+        		self.DFS_track(nodes,visited)
