@@ -21,3 +21,16 @@ class Graph(object):
         self.graph[node1].add(node2)
         if not self.directed:
             self.graph[node2].add(node1)
+    
+    def remove(self, node):
+        """ Remove all references to node """
+
+        for n, cxns in self.graph.items():
+            try:
+                cxns.remove(node)
+            except KeyError:
+                pass
+        try:
+            del self.graph[node]
+        except KeyError:
+            pass
