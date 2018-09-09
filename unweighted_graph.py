@@ -54,3 +54,11 @@ class Graph(object):
                 if new_path:
                     return new_path
         return None
+    
+    def __str__(self):
+        return '{}({})'.format(self.__class__.__name__, dict(self.graph))
+
+    def check(self):
+    	for n,k in self.graph.items():
+    		print(n,'--->',k)
+    	print(self.graph['B'])
