@@ -39,3 +39,18 @@ class Graph(object):
         """ Is node1 directly connected to node2 """
 
         return node1 in self.graph and node2 in self.graph[node1]
+    
+    def find_path(self, node1, node2, path=[]):
+        """ Find any path between node1 and node2 (may not be shortest) """
+
+        path = path + [node1]
+        if node1 == node2:
+            return path
+        if node1 not in self.graph:
+            return None
+        for node in self.graph[node1]:
+            if node not in path:
+                new_path = self.find_path(node, node2, path)
+                if new_path:
+                    return new_path
+        return None
