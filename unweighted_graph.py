@@ -62,3 +62,19 @@ class Graph(object):
     	for n,k in self.graph.items():
     		print(n,'--->',k)
     	print(self.graph['B'])
+        
+    def BFS(self,s):
+    	visited=[False]*(len(self.graph))
+    	queue=deque()
+    	queue.append(s)
+    	visited[s]=True
+
+    	while queue:
+    		s=queue.popleft()
+    		print(s,end="-->")
+
+    		for nodes in self.graph[s]:
+    			#print(nodes,'no')
+    			if(visited[nodes]==False):
+    				queue.append(nodes)
+    				visited[nodes]=True
