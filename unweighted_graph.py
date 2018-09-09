@@ -8,3 +8,9 @@ class Graph(object):
         self.graph = defaultdict(set)
         self.directed = directed
         self.add_connections(connections)
+    
+    def add_connections(self, connections):
+        """ Add connections (list of tuple pairs) to graph """
+
+        for node1, node2 in connections:
+            self.add(node1, node2)
