@@ -34,3 +34,8 @@ class Graph(object):
             del self.graph[node]
         except KeyError:
             pass
+    
+    def is_connected(self, node1, node2):
+        """ Is node1 directly connected to node2 """
+
+        return node1 in self.graph and node2 in self.graph[node1]
