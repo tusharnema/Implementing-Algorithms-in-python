@@ -93,3 +93,19 @@ class Graph(object):
         	if(visited[nodes]==False):
         		visited[nodes]=True
         		self.DFS_track(nodes,visited)
+    
+connections = [(0,1),(1, 2), (2, 3), (2, 4),
+                   (3, 4), (5, 6), (7, 3)]
+
+g=Graph(connections)
+
+#print(g.graph)
+
+g.add_connections([[6,8],[8,4],[9,10]])
+print(g.graph)
+
+print()
+
+g.BFS(0)
+print()
+g.DFS(0)
