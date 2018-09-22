@@ -39,12 +39,7 @@ def getMin(root):
         root=root.left
     return prev
  
-def getMax(root):
-    prev=None
-    while root:
-        prev=root
-        root=root.right
-    return prev
+
  
 def height(root):
     
