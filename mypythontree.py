@@ -10,7 +10,14 @@ def inorder(root):
         inorder(root.left)
         print(root.data,end=' ')
         inorder(root.right)
- 
+
+def getMax(root):
+    prev=None
+    while root:
+        prev=root
+        root=root.right
+    return prev
+
 def insert(root,data):
     #print(root,data)
     if root is None:
