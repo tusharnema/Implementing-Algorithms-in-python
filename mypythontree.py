@@ -3,7 +3,7 @@ class Node:
         self.data=data
         self.left=None
         self.right=None
-        
+        self.count=1
  
 def inorder(root):
     if root:
