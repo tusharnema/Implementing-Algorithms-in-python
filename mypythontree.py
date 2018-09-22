@@ -116,6 +116,3 @@ root=insert(root,9)
 root=insert(root,11)
 root=insert(root,5)
 
-inorder(root)
-print()
-print(lca(root,1,5).data)
